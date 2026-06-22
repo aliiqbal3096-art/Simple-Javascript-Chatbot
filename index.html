@@ -1,18 +1,54 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Advanced Chatbot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA- AI agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="gradient-background" class="background-animation"></div>
+    <div class="hacker-effect-overlay"></div>
+    <div class="line-effect-left"></div>
+    <div class="line-effect-right"></div>
 
-    <h1>Chatbot 🤖</h1>
+    <div class="container">
+        <header class="header">
+            <button id="savedChatsBtn" class="header-button menu-button" title="Saved Chats">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </button>
+            <div class="header-right">
+                <button id="newChatBtn" class="header-button" title="New Chat">+</button>
+                <button id="tempChatBtn" class="header-button" title="Temporary Chat (Not Saved)">Temp</button>
+            </div>
+        </header>
 
-    <input type="text" id="userInput" placeholder="Type message">
-    <button onclick="sendMessage()">Send</button>
+        <main class="chat-area">
+            <div id="chatDisplay" class="chat-display">
+                <div class="message ai-message">
+                    <img src="assets/ai.jpg" alt="AI Avatar" class="avatar ai-avatar">
+                    <p class="message-text">Hi! I am NOVA, Your personal AI coding assistant. How can I help you today?</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <button id="fileAccessBtn" class="input-button" title="Access Files">📁</button>
+                <textarea id="messageInput" placeholder="Ask NOVA anything Affan..."></textarea>
+                <button id="sendMessageBtn" class="input-button send-button" title="Send Message">▶</button>
+            </div>
+        </main>
 
-    <div id="chatBox"></div>
+        <footer class="footer">
+            <div class="theme-switcher">
+                <button id="themeLight" class="theme-button" data-theme="light" title="Light Theme">Light</button>
+                <button id="themeDark" class="theme-button" data-theme="dark" title="Dark Theme">Dark</button>
+                <button id="themeMoon" class="theme-button" data-theme="moon" title="Moon Theme">Moon</button>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
